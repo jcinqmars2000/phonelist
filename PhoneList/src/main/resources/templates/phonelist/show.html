@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>Show Recipe</title>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container-fluid" style="margin-top: 20px">
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3">
+				<div class="pannel-group">
+					<div class="panel panel-primary">
+						<div class="panel-heading">
+							<!--/*@thymesVar id="phonelist" type="com.steereengineering.model.PhoneList"*/-->
+							<h1 class="panel-title" align="center"
+								th:text="${phonelist.firstname} +' ' + ${phonelist.lastname} ">Display
+								Name!</h1>
+						</div>
+						<div class="panel-body">
+							<div class="table-responsive">
+								<table class="table">
+									<tbody>
+										<tr>
+											<td>ID:</td>
+											<td th:text="${phonelist.id}"></td>
+										</tr>
+										<tr>
+											<td>First Name:</td>
+											<td th:text="${phonelist.firstname}"></td>
+										</tr>
+										<tr>
+											<td>Last Name:</td>
+											<td th:text="${phonelist.lastname}"></td>
+										</tr>
+										<tr>
+											<td>Extension:</td>
+											<td th:text="${phonelist.extension}"></td>
+										</tr>
+										<tr>
+											<td>Cell Phone:</td>
+											<td th:text="${phonelist.cellphone}"></td>
+										</tr>
+										<tr>
+											<td>Email:</td>
+											<td th:text="${phonelist.email}"></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+</body>
+</html>
